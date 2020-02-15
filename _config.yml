@@ -2,9 +2,9 @@
 baseurl: ""
 
 # User config
-author: "Daniel Shervheim"
+author: "Tien Dinh"
 description: "A Personal Portfolio."
-email: "danielshervheim@gmail.com"
+email: "tiendinhphuc@gmail.com"
 
 # User collections
 collections:
