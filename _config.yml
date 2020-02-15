@@ -9,9 +9,9 @@ email: "tiendinhphuc@gmail.com"
 # User collections
 collections:
     projects:
-        output: true
+        output: false
     coursework:
-        output: true
+        output: false
 
 # Collection defaults.
 defaults:
