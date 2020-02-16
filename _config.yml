@@ -10,8 +10,6 @@ email: "tiendinhphuc@gmail.com"
 collections:
     projects:
         output: true
-    coursework:
-        output: false
 
 # Collection defaults.
 defaults:
@@ -27,13 +25,6 @@ defaults:
         type: "posts"
     values:
         layout: page
--
-    scope:
-        path: "_projects"
-        type: "projects"
-    values:
-        layout: page
-        image: /assets/img/placeholder.jpg
 -
     scope:
         path: "_coursework"

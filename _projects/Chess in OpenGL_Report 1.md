@@ -1,6 +1,6 @@
 ---
 title: Use of Animation
-permalink: /coursework/csci-8980/project-3/report-1
+permalink: /project/chess/technical-report-1
 hide: true
 ---
 

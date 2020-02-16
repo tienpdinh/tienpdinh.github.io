@@ -1,6 +1,6 @@
 ---
 title: Game Development
-permalink: /coursework/csci-8980/project-3/report-2
+permalink: /project/chess/technical-report-2
 hide: true
 ---
 
