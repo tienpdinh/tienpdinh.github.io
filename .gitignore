@@ -1,3 +1,4 @@
 _site*
 Makefile
-.DS_Store
+.jekyll-cache
+Gemfile*
