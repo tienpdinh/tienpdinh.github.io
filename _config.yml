@@ -21,8 +21,8 @@ defaults:
         layout: page
 -
     scope:
-        path: "_project"
-        type: "project"
+        path: "_projects"
+        type: "projects"
     values:
         layout: page
         image: /assets/img/placeholder.jpg
