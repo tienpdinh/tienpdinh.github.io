@@ -27,8 +27,8 @@ defaults:
         layout: page
 -
     scope:
-        path: "_coursework"
-        type: "coursework"
+        path: "_project"
+        type: "project"
     values:
         layout: page
         image: /assets/img/placeholder.jpg
