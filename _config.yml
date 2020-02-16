@@ -21,12 +21,6 @@ defaults:
         layout: page
 -
     scope:
-        path: "_posts"
-        type: "posts"
-    values:
-        layout: page
--
-    scope:
         path: "_project"
         type: "project"
     values:
