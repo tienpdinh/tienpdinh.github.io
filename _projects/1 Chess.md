@@ -12,6 +12,7 @@ Our directive was to create a game in a provided game engine, using only Lua scr
 
 ## Media
 ![beauty shot](/assets/img/cover_photos/chess.png)
+> A very cool shot by Dan.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CiJlOMVO5M8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 > A video demonstrating the gameplay of our chess program.
