@@ -63,7 +63,7 @@ header {
 }
 .site-title u {
   text-decoration: none;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid #488b8f;
 }
 
 /* Frontpage avatar */
@@ -112,10 +112,10 @@ header {
 }
 .site-nav u {
   text-decoration: none;
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid #488b8f;
 }
 .site-nav a:last-child {
-    margin-right: 0px;
+  margin-right: 0px;
 }
 
 
@@ -164,11 +164,28 @@ footer {
 .grid_item img {
   height: var(--gridItemHeight);
   max-height: var(--gridItemMaxHeight);
+  margin-bottom: 5px;
   object-fit: cover;
 }
 
 .grid_item_label {
   text-align:center;
+  font-family: 'PT Serif', serif;
+  font-size: 1.1rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.grid_item_label a {
+  text-transform: lowercase;
+  color: #24292e;
+  border-bottom: 2px solid #488b8f;
+}
+
+.grid_item_label a:hover {
+  color: rgb(87, 165, 139);
+  transition: color 0.2s;
+  text-decoration: none;
 }
 
 
@@ -181,7 +198,19 @@ footer {
   }
 
   .avatar_frontpage {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  .avatar_right {
     display: none;
+  }
+
+  .avatar_left {
+    width: 100%;
   }
 
   .site-nav a {
