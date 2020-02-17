@@ -22,6 +22,8 @@ I'm working on developing custom software for the FLIR cameras which allow resea
 I am also a teaching assistant in the Computer Science department for
 [Machine Architecture and Organization](https://www-users.cs.umn.edu/~kauffman/2021/).
 
+An updated version of my resume can be found [here](/assets/resume.pdf)
+
 <br/>
 
 ## Want to get in touch?
