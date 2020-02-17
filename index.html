@@ -15,9 +15,27 @@ title: Tien Dinh
 </head>
 
 <body class="markdown-body">
-	{% include header.html %}
-
+    {% include header.html %}
 	<main>
+        <!-- Avatar section -->
+        <div class="avatar_frontpage">
+            <!-- Text section, potential for type.js -->
+            <div class="avatar_left">
+                <h1>Tien Dinh</h1>
+                <div id="typed-strings">
+                    <p>Hello there!</p>
+                    <p>I'm a college student.</p>
+                    <p>I'm a software developer.</p>
+                    <p>I'm a web developer.</p>
+                    <p>I'm a machine learning enthusiast.</p>
+                </div>
+                <span id="typed"></span>
+            </div>
+            <div class="avatar_right">
+                <img sizes="(max-width: 300px) 100vw, 300px" src="/assets/avatar.jpg">
+            </div>
+        </div>
+
         <!-- Project label -->
 		<h2 class="grid_label">Projects</h2>
 
@@ -51,7 +69,6 @@ title: Tien Dinh
             {% endfor %}
         </div>
 	</main>
-
 	{% include footer.html %}
 </body>
 </html>

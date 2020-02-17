@@ -50,26 +50,69 @@ header {
 /* Title */
 .site-title h1 {
   border-bottom: 0px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'PT Serif', serif;
 }
 .site-title a {
-    color: #24292e;
-    transition: color 0.2s;
+  color: #24292e;
+  transition: color 0.2s;
 }
 .site-title a:hover {
-  color: #0365d6;
+  color: rgb(87, 165, 139);
   transition: color 0.2s;
   text-decoration: none;
+}
+.site-title u {
+  text-decoration: none;
+  border-bottom: 2px solid green;
+}
+
+/* Frontpage avatar */
+.avatar_frontpage {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.avatar_left {
+  text-align: left !important;
+  width: 66.67%;
+}
+.avatar_right {
+  width: 33.33%;
+}
+.avatar_left h1 {
+  font-size: 3.5rem;
+  font-family: 'PT Serif', serif;
+  border-bottom: none;
+}
+.avatar_left span {
+  font-size: 1.75rem;
+  font-family: 'PT Serif', serif;
+  margin: 0px;
+}
+.avatar_right img {
+  box-shadow: 4px 4px 0 0 #000, inset 0 0 0 2px hsla(0,0%,100%,.05);
 }
 
 /* Navigation */
 .site-nav {
-  font-size: 12px;
-  text-transform: uppercase;
-  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+  text-transform: lowercase;
+  font-family: 'PT Serif', serif;
 }
 .site-nav a {
-    margin-right: 15px;
+  margin-right: 15px;
+  color: #24292e;
+}
+.site-nav a:hover {
+  color: rgb(87, 165, 139);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.site-nav u {
+  text-decoration: none;
+  border-bottom: 2px solid green;
 }
 .site-nav a:last-child {
     margin-right: 0px;
@@ -106,7 +149,7 @@ footer {
 .grid_label {
   text-align:center;
   margin-bottom: var(--gutter);
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'PT Serif', serif;
 }
 
 .gutter {
