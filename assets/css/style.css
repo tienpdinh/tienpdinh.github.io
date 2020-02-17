@@ -180,6 +180,10 @@ footer {
     text-align:center;
   }
 
+  .avatar_frontpage {
+    display: none;
+  }
+
   .site-nav a {
     display:block;
     margin-right: 0px;
