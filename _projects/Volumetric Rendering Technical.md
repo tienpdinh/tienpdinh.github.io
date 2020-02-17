@@ -1,5 +1,5 @@
 ---
-title: Volumetric Rendering
+title: Volumetric Technical Report
 image: /assets/img/volumetric/cloud.png
 permalink: /project/volumetric/report
 mathjax: true
