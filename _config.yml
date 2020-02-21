@@ -10,6 +10,8 @@ email: "tiendinhphuc@gmail.com"
 collections:
     projects:
         output: true
+    posts:
+        output: true
 
 # Collection defaults.
 defaults:
@@ -18,7 +20,7 @@ defaults:
         path: "_posts"
         type: "posts"
     values:
-        layout: page
+        layout: posts
 -
     scope:
         path: "_projects"
