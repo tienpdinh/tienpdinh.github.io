@@ -24,6 +24,8 @@ I am also a teaching assistant in the Computer Science department for
 
 An updated version of my resume can be found [here](/assets/resume.pdf)
 
+I also earned a Computer Vision Nanodegree from [Udacity](https://www.udacity.com/), check it out [here](https://graduation.udacity.com/confirm/CDC2RU6P).
+
 <br/>
 
 ## Want to get in touch?
@@ -33,7 +35,3 @@ Find me on [Github](http://github.com/tienpdinh).
 Connect with me on [LinkedIn](https://www.linkedin.com/in/tien-dinh).
 
 Email me at [tiendinhphuc@gmail.com](mailto:tiendinhphuc@gmail.com).
-
-## Credits
-
-A special thanks to my friend [Dan](https://danielshervheim.com/) for allowing me using and modifying his website template.
