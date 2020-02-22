@@ -2,7 +2,7 @@
 :root {
   /* SITEWIDE styles */
   --contentWidth: 1000px;
-  --articleWidth: 600px;
+  --articleWidth: 700px;
 
   /* MASONRY variables */
   --gutter: 20px;
@@ -139,7 +139,16 @@ footer {
     margin: 0px auto;
 }
 
+.single_column article {
+  font-family: 'PT Serif', serif;
+  font-size: 1.25rem;
+}
 
+.single_column article h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
 
 /* MASONRY */
 .grid {
