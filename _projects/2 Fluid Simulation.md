@@ -5,9 +5,26 @@ permalink: /project/fluid
 ---
 
 # Fluid Simulation
-**This is an ongoing project, check back later for some awesomeness.**
+2D Eulerian fluid simulation is a project I created for CSCI 5611 - Animation and
+Planning in Games. I'm very interested in learning how fluid flows in a medium
+and therefore decided to implement a simulation.
 
-In the meantime, you can read about the Navier–Stokes equations <a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations" target="_blank">here</a>.
+## Media
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hquSqXGp8yg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+![fluid](/assets/img/cover_photos/fluid.png)
+> 2D Fluid Simulation
+
+## Features
+- 200x200 grid benchmarking at 30+ FPS
+- User can use mouse to interact with the fluid
+- The simulation can be paused with 'v' button for various effects (like in my video)
+- Fluid will dissolve over time to avoid explosion
+
+## References
+- [Navier-Stokes equations](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations)
+- [Jos Stam's Real-Time Fluid Dynamics for Games](https://pdfs.semanticscholar.org/847f/819a4ea14bd789aca8bc88e85e906cfc657c.pdf)
+    - My implementation relies heavily on Stam's implementation in his paper.
 
 ## Source Code
-- Check back later...
+- I implemented my fluid simulation in Processing 3, the source code can be found [here](https://github.com/tienpdinh/FluidSim)
