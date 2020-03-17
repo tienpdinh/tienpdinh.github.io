@@ -2,6 +2,7 @@
 title: Thermometer Simulation
 image: /assets/img/cover_photos/thermo.png
 permalink: /project/thermo
+hide: true
 ---
 
 # Thermometer Simulation
