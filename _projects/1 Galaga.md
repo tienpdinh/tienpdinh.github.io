@@ -23,6 +23,8 @@ Our directive was to create a game that made uses of what we have learned during
 
 Rafi made the most of this Physics Engine, and it is a published `npm` package. The package can be found [here](https://www.npmjs.com/package/simple-physics-engine).
 
+The physics engine supports abstract classes for detecting and handling collisions between objects and updating them with Eulerian Integration. It also supports an extensible particle system engine, which we used for our Star Tunnel, our Laser, and our Explosion particle systems. The physics engine was heavily inspired by [this youtube tutorial](https://www.youtube.com/watch?v=3Oay1YxkP5c&list=PLEETnX-uPtBXm1KEr_2zQ6K_0hoGH6JJ0), and the particle system engine was heavily inspired by [this open-source implementation](https://github.com/stemkoski/stemkoski.github.com/blob/f5c7120af8488d04255b3e4492f4fb214d80b6ff/Three.js/js/ParticleEngine.js)
+
 ## Movements
 
 ### Player
