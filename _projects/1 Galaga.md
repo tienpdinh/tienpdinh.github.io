@@ -6,7 +6,7 @@ image: /assets/img/cover_photos/galaga.png
 
 # 3D Galaga
 
-**This game is live, you can play it [here](https://tienpdinh.com/Galaga)**
+**This game is live, you can play it [here](https://tienpdinh.com/Galaga) (GPU usage is recommended)**
 
 Final project for Dr. Stephen Guy's class **Animation and Planning in Games**. My classmate [Rafi Barash](https://rafibarash.com/) and I collaborated on this project.
 
