@@ -89,6 +89,15 @@ layer consists of 128 fully connected units.
 My agent was able to solve the environment in 503 episodes for regular DQN,
 and 381 episodes for Double DQN network.
 
+## Future Work
+There are many aspects in which I can improve this project. Implementing [dueling DQN](https://arxiv.org/abs/1511.06581) or
+[prioritized experience replay](https://arxiv.org/abs/1511.05952) would likely improve the number
+of episodes until solved.
+
+Now that this environment is solved, I should try out solving the same game, but with a different state representation.
+Representing the state as raw pixels would be more realistic since raw pixels are what we see, and we should allow
+the agent to see the same.
+
 ## Source Code
 The full source code for the project can be found [here](https://github.com/tienpdinh/DeepBanana)
 
