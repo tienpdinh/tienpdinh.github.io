@@ -44,7 +44,7 @@ green icon appear at the lower left corner of VSCode:
 ![remote-icon](/assets/img/remote-vscode/remote-icon.png)
 
 Clicking on this icon will bring up the setup for Remote Development:
-![rdev-menu](/assers/img/remote-vscode/rdev-menu.png)
+![rdev-menu](/assets/img/remote-vscode/rdev-menu.png)
 
 At this point, you need to decide what machine you want VSCode to
 connect to when doing remote editing. Most CSE lab machines will work,
@@ -84,7 +84,7 @@ If you see something like this, it means you have successfully connected to
 the desired remote machine:
 
 ```sh
-Last login: Fri Jun 12 23:02:09 2020 from 76.17.201.74
+Last login: Fri Jun 12 23:02:09 2020 from x.x.x.x
 dinh0080@csel-atlas:/home/dinh0080 $ 
 ```
 
@@ -119,6 +119,10 @@ tmpDir==/run/user/2363563==
 platform==linux==
 13bf30366675: end
 ```
+
+You can also check the status of the connection by looking at the lower left corner of
+VSCode, in this case it should show:
+![successful-connection](/assets/img/remote-vscode/successful-connection.png)
 
 At this point, VSCode is in remote development mode. You can hit File->Open to open directories
 or files you have on the remote machine.
