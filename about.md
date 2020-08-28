@@ -17,7 +17,12 @@ During my college career, I have worked with [Dr. Stephen J. Guy](https://www-us
 learning model to categorize legitimate and voluntary smiles from videos.
 
 Right now I'm working with Professor Aaron Kerlin in [Kerlin Lab](https://kerlinlab.org/) as a software developer,
-I'm working on developing custom software for the FLIR cameras which allow researchers to take pictures of living cells.
+I'm working on developing deep learning projects using [DeepLabCut](http://www.mousemotorlab.org/deeplabcut).
+
+Last summer, I interned at [Veritas](https://www.veritas.com/) as a DevOps developer. My team worked on
+integrating [Google's AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer) to
+build and test pipeline of [NetBackup](https://www.veritas.com/protection/netbackup). This tool is now
+being used in production to automatically detect memory-related issues.
 
 I am also a teaching assistant in the Computer Science department for
 [Machine Architecture and Organization](https://www-users.cs.umn.edu/~kauffman/2021/).
