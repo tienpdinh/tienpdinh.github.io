@@ -204,6 +204,6 @@ Make sure this file is world readable:
 chmod 644 authorized_keys
 ```
 
-You are now have a password-free SSH connection set up.
+You now have a password-free SSH connection set up.
 
 **Any additional question, don't hestitate to ask us on Piazza or over email.**
