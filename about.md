@@ -11,7 +11,10 @@ layout: page
 
 I'm Tien!
 
-I'm a senior studying Computer Science with a focus on Machine Learning and Artificial Intelligence at the University of Minnesota.
+I'm currently a Software Engineer at Voximetry, where I focus on developing Torch, a tool that uses Monte Carlo
+algorithm to figure out the exact dose of drug for RPT treatment.
+
+I graduated with a Bachelor's Degree in Computer Science from the University of Minnesota, Twin Cities on December 2020.
 
 During my college career, I have worked with [Dr. Stephen J. Guy](https://www-users.cs.umn.edu/~sjguy/) in Applied Motion Lab, where we developed a deep 
 learning model to categorize legitimate and voluntary smiles from videos.
