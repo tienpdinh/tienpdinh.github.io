@@ -19,10 +19,10 @@ I graduated with a Bachelor's Degree in Computer Science from the University of 
 During my college career, I have worked with [Dr. Stephen J. Guy](https://www-users.cs.umn.edu/~sjguy/) in Applied Motion Lab, where we developed a deep 
 learning model to categorize legitimate and voluntary smiles from videos.
 
-Right now I'm working with Professor Aaron Kerlin in [Kerlin Lab](https://kerlinlab.org/) as a software developer,
-I'm working on developing deep learning projects using [DeepLabCut](http://www.mousemotorlab.org/deeplabcut).
+I also worked with Professor Aaron Kerlin in [Kerlin Lab](https://kerlinlab.org/) as a software developer, 
+developing deep learning projects using [DeepLabCut](http://www.mousemotorlab.org/deeplabcut).
 
-Last summer, I interned at [Veritas](https://www.veritas.com/) as a DevOps developer. My team worked on
+In summer 2020, I interned at [Veritas](https://www.veritas.com/) as a DevOps developer. My team worked on
 integrating [Google's AddressSanitizer](https://github.com/google/sanitizers/wiki/AddressSanitizer) to
 build and test pipeline of [NetBackup](https://www.veritas.com/protection/netbackup). This tool is now
 being used in production to automatically detect memory-related issues.
