@@ -30,7 +30,7 @@ being used in production to automatically detect memory-related issues.
 I am also a teaching assistant in the Computer Science department for
 [Machine Architecture and Organization](https://www-users.cs.umn.edu/~kauffman/2021/).
 
-An updated version of my resume can be found [here](/assets/resume.pdf)
+An updated version of my resume can be found [here](/assets/tiendinh.pdf)
 
 I also earned a Computer Vision Nanodegree from [Udacity](https://www.udacity.com/), check it out [here](https://graduation.udacity.com/confirm/CDC2RU6P).
 
