@@ -11,7 +11,7 @@ layout: page
 
 I'm Tien!
 
-I'm currently a Software Engineer at DraftKings.
+I'm currently a Senior Software Engineer at DraftKings.
 
 I graduated with a Bachelor's Degree in Computer Science from the University of Minnesota, Twin Cities on December 2020.
 
