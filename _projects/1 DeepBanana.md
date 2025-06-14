@@ -1,7 +1,7 @@
 ---
 title: DeepBanana
 permalink: /project/deepbanana
-image: /assets/img/cover_photos/deepbanana.png
+image: /img/cover_photos/deepbanana.png
 ---
 
 # DeepBanana
@@ -83,7 +83,7 @@ For neural network architecture, I used a 3 layers fully connected perceptron ne
 layer consists of 128 fully connected units.
 
 ## Results
-![graph](/assets/img/reward2000.png)
+![graph](/img/reward2000.png)
 > Accumulated return over 2000 episodes
 
 My agent was able to solve the environment in 503 episodes for regular DQN,

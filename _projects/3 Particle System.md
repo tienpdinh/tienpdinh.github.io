@@ -1,6 +1,6 @@
 ---
 title: Particle System
-image: /assets/img/cover_photos/particle-system.gif
+image: /img/cover_photos/particle-system.gif
 permalink: /project/particle-system
 ---
 

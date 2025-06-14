@@ -31,20 +31,20 @@ capability of VSCode.
 
 ### Installing VSCode Remote extensions
 Open up VSCode, on the left panel, click on the extensions tab:
-![extensions](/assets/img/remote-vscode/extensions.png)
+![extensions](/img/remote-vscode/extensions.png)
 
 Search for "remote development" and install the package from Microsoft
-![remote-dev](/assets/img/remote-vscode/remote-dev.png)
+![remote-dev](/img/remote-vscode/remote-dev.png)
 
 You can also have a look at this extension on the VSCode website: [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 
 After installing the extensions, you might have to close and reopen VSCode.
 If the installation process completed without any error, you should see a little
 green icon appear at the lower left corner of VSCode:
-![remote-icon](/assets/img/remote-vscode/remote-icon.png)
+![remote-icon](/img/remote-vscode/remote-icon.png)
 
 Clicking on this icon will bring up the setup for Remote Development:
-![rdev-menu](/assets/img/remote-vscode/rdev-menu.png)
+![rdev-menu](/img/remote-vscode/rdev-menu.png)
 
 At this point, you need to decide what machine you want VSCode to
 connect to when doing remote editing. Most CSE lab machines will work,
@@ -92,20 +92,20 @@ Back to VSCode, open up the Remote Development menu and select "Remote-SSH: Conn
 Then click "Add New SSH Host...". At this point you want to enter the
 same command you used to connect to the remote machine, in my case, it
 would be:
-![new-connection](/assets/img/remote-vscode/new-connection.png)
+![new-connection](/img/remote-vscode/new-connection.png)
 
 Hit Enter until the lower right of VSCode shows a notification saying
 it has successfully added the host.
 
 Now if you open up Remote Development menu and hit "Remote-SSH: Connect to Host..." again,
 the host you just added will show up as an option:
-![added-host](/assets/img/remote-vscode/added-hosts.png)
+![added-host](/img/remote-vscode/added-hosts.png)
 
 Click on this host, the log will ask for your password, put in your password and wait a little bit
 until the log settles, that's when you know the connection is successful. You might
 have to select the destination platform the first time you connect,
 just select Linux:
-![select-plat](/assets/img/remote-vscode/select-plat.png)
+![select-plat](/img/remote-vscode/select-plat.png)
 
 If the log shows something like below, the connection is successful:
 ```sh
@@ -122,7 +122,7 @@ platform==linux==
 
 You can also check the status of the connection by looking at the lower left corner of
 VSCode, in this case it should show:
-![successful-connection](/assets/img/remote-vscode/successful-connection.png)
+![successful-connection](/img/remote-vscode/successful-connection.png)
 
 At this point, VSCode is in remote development mode. You can hit File->Open to open directories
 or files you have on the remote machine.

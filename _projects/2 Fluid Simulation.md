@@ -1,6 +1,6 @@
 ---
 title: Fluid Simulation
-image: /assets/img/cover_photos/fluid.png
+image: /img/cover_photos/fluid.png
 permalink: /project/fluid
 ---
 
@@ -12,7 +12,7 @@ and therefore decided to implement a simulation.
 ## Media
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hquSqXGp8yg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-![fluid](/assets/img/cover_photos/fluid.png)
+![fluid](/img/cover_photos/fluid.png)
 > 2D Fluid Simulation
 
 ## Features

@@ -1,6 +1,6 @@
 ---
 title: Realtime Calculator
-image: /assets/img/cover_photos/calculator.jpg
+image: /img/cover_photos/calculator.jpg
 permalink: /project/calculator
 ---
 

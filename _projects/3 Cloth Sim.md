@@ -1,6 +1,6 @@
 ---
 title: Cloth Simulation
-image: /assets/img/cover_photos/cloth.png
+image: /img/cover_photos/cloth.png
 permalink: /project/cloth
 ---
 

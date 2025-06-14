@@ -1,6 +1,6 @@
 ---
 title: attention mechanism
-image: /assets/img/cover_photos/seq2seq.png
+image: /img/cover_photos/seq2seq.png
 permalink: /project/seq2seq
 ---
 
@@ -27,13 +27,13 @@ Then the output will be:
 I implemented two sequence models, one with attention and one without. The model without
 attention performs relatively good until the length of the sequence hits 20, at which
 attention completely outperforms it.
-![acclen](/assets/img/seq2seq/acc_vs_length.png)
+![acclen](/img/seq2seq/acc_vs_length.png)
 > The orange line is model without attention, while
 > the blue line is model with attention
 
 I also drawed a heat map of the attention model, to see at each point, what input hidden state it
 pays attention to when output a particular number.
-![heat](/assets/img/seq2seq/heat.png)
+![heat](/img/seq2seq/heat.png)
 > Heatmap of attention
 
 We can see that it pays attention to the exact number from the input in each output step.

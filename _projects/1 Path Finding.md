@@ -1,6 +1,6 @@
 ---
 title: Path Finding
-image: /assets/img/cover_photos/pathfinding.png
+image: /img/cover_photos/pathfinding.png
 permalink: /project/pathfinding
 hide: true
 ---
@@ -18,7 +18,7 @@ with a single obstacle in the middle.
 <iframe width="1253" height="705" src="https://www.youtube.com/embed/z17ashNtlUw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 > Path Finding with Path Smoothing
 
-![graph](/assets/img/cover_photos/graph.png)
+![graph](/img/cover_photos/graph.png)
 > PRM Graph with the shortest path found
 
 ## Features
