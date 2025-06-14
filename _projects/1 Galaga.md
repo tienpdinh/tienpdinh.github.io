@@ -1,7 +1,7 @@
 ---
 title: 3D Galaga
 permalink: /project/galaga
-image: /assets/img/cover_photos/galaga.png
+image: /img/cover_photos/galaga.png
 ---
 
 # 3D Galaga
@@ -13,7 +13,7 @@ Final project for Dr. Stephen Guy's class **Animation and Planning in Games**. M
 Our directive was to create a game that made uses of what we have learned during the semester. We chose to create Galaga because we can create our custom Physics Engine and Path Finding.
 
 ## Media
-![beauty shot](/assets/img/galaga/galaga.png)
+![beauty shot](/img/galaga/galaga.png)
 > Gameplay
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z5Fl2Vrd1_o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

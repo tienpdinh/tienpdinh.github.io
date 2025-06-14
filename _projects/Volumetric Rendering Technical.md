@@ -1,6 +1,6 @@
 ---
 title: Volumetric Technical Report
-image: /assets/img/volumetric/cloud.png
+image: /img/volumetric/cloud.png
 permalink: /project/volumetric/report
 mathjax: true
 hide: true
@@ -15,7 +15,7 @@ Shader is a crucial part in game development, it helps the developers create stu
 ## A sphere inside a cube
 In this section, I will look into how to use only shader codes to draw a sphere inside a cube mesh. There is no geometry definition to the sphere as it is only rendered by the shader codes.
 
-![sphere](/assets/img/volumetric/sphere.png)
+![sphere](/img/volumetric/sphere.png)
 > A sphere rendered only using shader codes.
 
 To achieve the effect above, we first need to do ray marching from our camera view to the cube, and going into the cube's interior. Calculating the view direction vector is simple using the Unity's built in functions and variables.
@@ -49,12 +49,12 @@ I hard-coded the `CENTER` and `RADIUS` of the sphere, therefore the position and
 ## Volumetric Fog
 In this section, we will use shader code to generate volumetric fog in a sphere shape, with the highest intensity in the middle, then the intensity will decrease exponentially going toward the surface of the sphere.
 
-![3d-fog](/assets/img/volumetric/fog.png)
+![3d-fog](/img/volumetric/fog.png)
 > 3D Fog
 
 In the previous section, the ray marching algorithm we used was relatively simple, by only comparing the distance from the pixel to the center of the sphere to the radius. However, it is a good idea to use a more general formula to find these points to sample fog. Consider the positions of the camera, and the sphere in question like below, taken from [here](https://www.scratchapixel.com/lessons/3d-basic-rendering/minimal-ray-tracer-rendering-simple-shapes/ray-sphere-intersection)
 
-![math](/assets/img/volumetric/raysphereisect1.png)
+![math](/img/volumetric/raysphereisect1.png)
 
 Where O is the camera position, D (normalized) is the view direction, P and P' are the intersection points. We can express P and P' as:
 
@@ -108,7 +108,7 @@ The return value will be the accumulate intensity of fog at a particular pixel.
 
 ## Volumetric Cloud
 
-![pretty-cloud](/assets/img/volumetric/cloud.png)
+![pretty-cloud](/img/volumetric/cloud.png)
 > Volumetric Cloud rendered using Shader codes
 
 Cloud is considered as fog, but it is more random. Although the technique of generating 3D cloud is similar as the technique discussed above, we need to incorporate noise to make it look natural. I chose to use value noise as it is perfect to generate cloud. Value noise is a type of noise commonly used as a procedural texture primitive in computer graphics. It is conceptually different from, and often confused with gradient noise, examples of which are Perlin noise and Simplex noise. This method consists of the creation of a lattice of points which are assigned random values. The noise function then returns the interpolated number based on the values of the surrounding lattice points.

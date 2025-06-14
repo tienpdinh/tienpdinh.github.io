@@ -1,6 +1,6 @@
 ---
 title: Volumetric Rendering
-image: /assets/img/volumetric/cloud.png
+image: /img/volumetric/cloud.png
 permalink: /project/volumetric
 ---
 
@@ -11,13 +11,13 @@ permalink: /project/volumetric
 In this project, I used only shader codes to create stunning 3D effects such as 3D cloud, 3D fog. I studied the use of raymarching
 to render objects without meshes.
 
-![sphere](/assets/img/volumetric/sphere.png)
+![sphere](/img/volumetric/sphere.png)
 > A sphere rendered only using shader codes.
 
-![3d-fog](/assets/img/volumetric/fog.png)
+![3d-fog](/img/volumetric/fog.png)
 > 3D Fog
 
-![pretty-cloud](/assets/img/volumetric/cloud.png)
+![pretty-cloud](/img/volumetric/cloud.png)
 > Volumetric Cloud
 
 I rendered these effects in Unity, my volumetric render codes are completely separated from
@@ -25,7 +25,7 @@ Unity's built in volumetric system.
 
 ## Technical Report
 
-- A full technical report on how I approach this problem can be found [here](/project/volumetric/report)
+- A full technical report on how I approach this problem can be found [here](/projects/volumetric-technical-report)
 
 ## Source Code
 

@@ -1,6 +1,6 @@
 ---
 title: Order a Burger
-image: /assets/img/cover_photos/burger.png
+image: /img/cover_photos/burger.png
 permalink: /project/burger
 ---
 
@@ -14,7 +14,7 @@ build a burger of their choice for a React class that I am taking.
 mobile device.**
 
 ## Media
-![burger](/assets/img/cover_photos/burger.png)
+![burger](/img/cover_photos/burger.png)
 > A burger built with my app.
 
 ## Development

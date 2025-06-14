@@ -1,6 +1,6 @@
 ---
 title: Auto Image Captioning
-image: /assets/img/cover_photos/captioning-cover.png
+image: /img/cover_photos/captioning-cover.png
 permalink: /project/captioning
 ---
 
@@ -12,7 +12,7 @@ learn more about the dataset [here](http://cocodataset.org/#home).
 This project was part of the [Udacity Computer Vision Nanodegree Program](https://www.udacity.com/course/computer-vision-nanodegree--nd891).
 
 ## Network Architecture
-![archi](/assets/img/cover_photos/encoder-decoder.png)
+![archi](/img/cover_photos/encoder-decoder.png)
 > CNN - RNN architecture
 
 The architecture that I implemented was a Convolutional Neural Network (CNN) followed by
