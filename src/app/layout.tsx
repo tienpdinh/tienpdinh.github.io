@@ -34,6 +34,17 @@ export default function RootLayout({
           }}
         />
         
+        {/* Domain Redirect */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (window.location.hostname === 'tienpdinh.com' || window.location.hostname === 'www.tienpdinh.com') {
+                window.location.replace('https://tiendinh.com' + window.location.pathname + window.location.search + window.location.hash);
+              }
+            `,
+          }}
+        />
+        
         {/* Typed.js */}
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" async></script>
       </head>
