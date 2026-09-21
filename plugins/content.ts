@@ -33,6 +33,7 @@ export interface Project {
   id: string
   slug: string
   title: string
+  summary: string
   image: string
   permalink?: string
   redirect?: boolean
@@ -188,6 +189,38 @@ function excerptOf(html: string): string {
   return text.slice(0, 200) + (text.length > 200 ? '…' : '')
 }
 
+const ENTITIES: Record<string, string> = {
+  '&amp;': '&',
+  '&lt;': '<',
+  '&gt;': '>',
+  '&quot;': '"',
+  '&#39;': "'",
+  '&#x27;': "'",
+  '&nbsp;': ' ',
+}
+
+/**
+ * Plain-text opening paragraph, used as the card description on the projects
+ * index. The markdown is the only place a project describes itself — there is
+ * no description in the frontmatter.
+ */
+function summaryOf(html: string, limit = 180): string {
+  const body = html.replace(/<h1[^>]*>[\s\S]*?<\/h1>/i, '')
+  const paragraph = body.match(/<p[^>]*>([\s\S]*?)<\/p>/i)
+
+  const text = (paragraph ? paragraph[1] : body)
+    // Inline tags are dropped outright; only line breaks become whitespace, so
+    // stripping <strong> does not leave a gap before the next punctuation.
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<[^>]*>/g, '')
+    .replace(/&[a-z#0-9]+;/gi, (entity) => ENTITIES[entity.toLowerCase()] ?? entity)
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  if (text.length <= limit) return text
+  return text.slice(0, limit).replace(/\s+\S*$/, '') + '…'
+}
+
 function readDir(root: string, dir: string): string[] {
   const full = path.join(root, dir)
   if (!fs.existsSync(full)) return []
@@ -221,14 +254,16 @@ async function loadProjects(root: string): Promise<Project[]> {
       const id = fileName.replace(/\.md$/, '')
       const parsed = matter(fs.readFileSync(path.join(root, projectsDir, fileName), 'utf8'))
       const title = parsed.data.title || id
+      const html = await render(parsed.content)
 
       return {
         ...parsed.data,
         id,
         title,
+        html,
+        summary: summaryOf(html),
         slug: createSlug(title),
         image: parsed.data.image || '/img/placeholder.jpg',
-        html: await render(parsed.content),
       } as Project
     }),
   )

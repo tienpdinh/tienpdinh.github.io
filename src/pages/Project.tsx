@@ -21,7 +21,7 @@ export default function ProjectPage() {
       </article>
 
       <p className="back">
-        <Link to="/work">All work</Link>
+        <Link to="/projects">All projects</Link>
       </p>
     </>
   )

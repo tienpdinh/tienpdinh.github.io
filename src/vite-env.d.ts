@@ -15,6 +15,7 @@ declare module 'virtual:content' {
     id: string
     slug: string
     title: string
+    summary: string
     image: string
     html: string
     permalink?: string
