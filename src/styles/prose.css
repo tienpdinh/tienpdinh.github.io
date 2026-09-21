@@ -63,8 +63,13 @@
   margin-block: 2.4em;
 }
 
+/*
+ * Never upscale: most of these images are well under the figure width, and
+ * stretching them to fill it just blurs them. They centre instead.
+ */
 .prose figure img {
-  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
   border: 1px solid var(--rule);
   border-radius: var(--radius);
 }
