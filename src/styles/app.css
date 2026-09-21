@@ -134,17 +134,14 @@ main {
   }
 }
 
-/*
- * A little under a full screen, so the top of the bio below breaks the fold
- * and invites the scroll without needing an arrow to say so.
- */
+/* A full screen, so the nav rests at the bottom of the viewport. */
 .landing {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  min-height: 92vh;
-  min-height: 92svh;
+  min-height: 100vh;
+  min-height: 100svh;
   max-width: var(--wide);
   margin-inline: auto;
   padding: 1.75rem var(--gutter) 2.5rem;
