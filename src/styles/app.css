@@ -412,10 +412,9 @@ main {
 
 /*
  * Everything starts at the shell's left edge, in line with the wordmark above
- * it, rather than floating in the middle of a wide page.
+ * it, and runs the full width of it.
  */
 .page-head {
-  max-width: var(--measure);
   padding-bottom: 2.5rem;
 }
 
@@ -447,7 +446,7 @@ main {
 }
 
 .post-main {
-  max-width: var(--measure);
+  max-width: none;
 }
 
 @media (max-width: 45rem) {
@@ -491,7 +490,6 @@ main {
 }
 
 .back {
-  max-width: var(--measure);
   margin-top: 3.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--rule);
