@@ -1,13 +1,8 @@
 /*
- * The column itself spans the shell and each block caps its own width: text
- * holds a readable measure while figures and code run wider. Capping the
- * container instead would need viewport maths that overflows by the width of
- * a scrollbar.
+ * Text runs the full width of the shell. Figures stay capped because the
+ * source images are around 800-1200px wide and would only upscale and blur
+ * past that.
  */
-.prose > * {
-  max-width: var(--measure);
-}
-
 .prose > * + * {
   margin-top: 1.4em;
 }
@@ -56,10 +51,6 @@
 
 .prose > figure {
   max-width: min(100%, 68rem);
-}
-
-.prose > pre {
-  max-width: min(100%, 58rem);
 }
 
 .prose figure {
