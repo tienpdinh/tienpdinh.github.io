@@ -21,16 +21,21 @@ export default function Blog() {
         <ul className="post-list">
           {posts.map((post) => (
             <li key={post.id}>
-              <article>
-                {post.date && (
+              <article className="post-row">
+                {post.date ? (
                   <p className="post-date">
                     <time dateTime={post.date}>{formatDate(post.date)}</time>
                   </p>
+                ) : (
+                  <span />
                 )}
-                <h2>
-                  <Link to={`/posts/${post.id}`}>{post.title}</Link>
-                </h2>
-                <div className="post-excerpt" dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+
+                <div className="post-main">
+                  <h2>
+                    <Link to={`/posts/${post.id}`}>{post.title}</Link>
+                  </h2>
+                  <div className="post-excerpt" dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+                </div>
               </article>
             </li>
           ))}
