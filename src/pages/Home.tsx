@@ -21,7 +21,7 @@ export default function Home() {
       </div>
 
       <nav className="landing-nav" aria-label="Main">
-        <Link to="/work">Work</Link>
+        <Link to="/projects">Projects</Link>
         <Link to="/blog">Writing</Link>
         <Link to="/about">About</Link>
         <a href="https://github.com/tienpdinh" target="_blank" rel="noopener noreferrer">

@@ -78,7 +78,8 @@ main {
     gap: 0.35rem 0.95rem;
   }
 
-  .nav-divider {
+  .nav-divider,
+  .nav-social {
     display: none;
   }
 }
@@ -184,112 +185,136 @@ main {
   border-bottom-color: var(--accent);
 }
 
-/* ---------- Work index ---------- */
+/* ---------- Project cards ---------- */
 
-.index {
+.cards {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
-  gap: clamp(2rem, 6vw, 5rem);
-  align-items: start;
-}
-
-.index-list {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr));
+  gap: clamp(1.25rem, 2.2vw, 2rem);
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.index-list li {
-  border-top: 1px solid var(--rule);
-}
-
-.index-list li:last-child {
-  border-bottom: 1px solid var(--rule);
-}
-
-.index-list a {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding-block: clamp(0.85rem, 2vw, 1.3rem);
-  color: var(--ink);
-  text-decoration: none;
-  transition: opacity var(--transition), color var(--transition);
-}
-
-.index-title {
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: clamp(1.15rem, 2.4vw, 1.66rem);
-  letter-spacing: -0.02em;
-}
-
-/* Reading one title dims the rest of the list. */
-.index-list:hover a {
-  opacity: 0.4;
-}
-
-.index-list li:hover a,
-.index-list a:focus-visible {
-  opacity: 1;
-  color: var(--accent);
-}
-
-.index-thumb {
-  display: none;
-}
-
-.index-preview {
-  position: sticky;
-  top: 3rem;
-  aspect-ratio: 4 / 3;
+.card {
   background: var(--surface);
   border: 1px solid var(--rule);
+  border-radius: 8px;
+  transition: transform var(--transition), box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border-radius: inherit;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  /* Tuned per theme: heavy on the dark ground, restrained on the light one. */
+  box-shadow: var(--card-shadow);
+}
+
+.card-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: inherit;
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
   overflow: hidden;
 }
 
-.index-preview img {
-  position: absolute;
-  inset: 0;
+.card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.card-reveal {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.15rem;
+  background: linear-gradient(
+    to top,
+    rgba(6, 10, 18, 0.95) 0%,
+    rgba(6, 10, 18, 0.88) 45%,
+    rgba(6, 10, 18, 0.3) 100%
+  );
   opacity: 0;
   transition: opacity var(--transition);
 }
 
-.index-preview img.is-active {
+.card-reveal p {
+  color: #e6eaf2;
+  font-size: var(--step--1);
+  line-height: 1.55;
+}
+
+.card:hover .card-reveal,
+.card:focus-within .card-reveal {
   opacity: 1;
 }
 
-@media (max-width: 52rem) {
-  .index {
-    grid-template-columns: 1fr;
-  }
+.card-title {
+  padding: 0.85rem 1.1rem 1rem;
+  font-size: var(--step-0);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
 
-  .index-preview {
+.card:hover .card-title,
+.card:focus-within .card-title {
+  color: var(--accent);
+}
+
+/*
+ * The overlay is a visual duplicate, so it is hidden from assistive tech and
+ * the real description lives in the card body, read out but not drawn.
+ */
+.card-desc {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Without a pointer nothing can be hovered, so the description drops into the
+   card body instead of sitting permanently over the image. */
+@media (hover: none) {
+  .card-reveal {
     display: none;
   }
 
-  /* No hover to drive the preview pane, so each row carries its own cover. */
-  .index-thumb {
-    display: block;
-    flex: none;
-    width: 4.75rem;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    border: 1px solid var(--rule);
+  .card-title {
+    padding-bottom: 0.35rem;
   }
 
-  .index-list:hover a {
-    opacity: 1;
+  .card-desc {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+    white-space: normal;
+    padding: 0 1.1rem 1rem;
+    color: var(--ink-muted);
+    font-size: var(--step--1);
+    line-height: 1.55;
   }
 }
 
 /* ---------- Page headers and lists ---------- */
 
 /*
- * Reading columns centre inside the wide shell; the work index is the only
+ * Reading columns centre inside the wide shell; the projects grid is the only
  * thing that spans its full width.
  */
 .page-head,
