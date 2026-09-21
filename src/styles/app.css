@@ -106,13 +106,17 @@ main {
   padding: 0;
 }
 
+/*
+ * A little under a full screen, so the top of the bio below breaks the fold
+ * and invites the scroll without needing an arrow to say so.
+ */
 .landing {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: 92vh;
+  min-height: 92svh;
   max-width: var(--wide);
   margin-inline: auto;
   padding: 1.75rem var(--gutter) 2.5rem;
@@ -183,6 +187,55 @@ main {
 .landing-nav a:hover {
   color: var(--ink);
   border-bottom-color: var(--accent);
+}
+
+/* ---------- Landing bio ---------- */
+
+.bio {
+  width: 100%;
+  max-width: var(--wide);
+  margin-inline: auto;
+  /* No bottom padding: the footer below brings its own top margin. */
+  padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.bio-row {
+  display: grid;
+  grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 3rem);
+}
+
+.bio-label {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--step--1);
+  letter-spacing: 0;
+  color: var(--ink-muted);
+}
+
+.bio-prose {
+  max-width: var(--measure);
+}
+
+.bio-prose > p + p {
+  margin-top: 1.3em;
+}
+
+.bio-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2rem;
+  margin-top: 2rem;
+  font-family: var(--font-display);
+  font-size: var(--step--1);
+}
+
+@media (max-width: 45rem) {
+  .bio-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
 }
 
 /* ---------- Project cards ---------- */

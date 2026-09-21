@@ -15,9 +15,12 @@ export default function Layout() {
       </Head>
 
       {bare ? (
-        <main id="main" className="main-bare">
-          <Outlet />
-        </main>
+        <>
+          <main id="main" className="main-bare">
+            <Outlet />
+          </main>
+          <Footer />
+        </>
       ) : (
         <>
           <a className="skip-link" href="#main">
