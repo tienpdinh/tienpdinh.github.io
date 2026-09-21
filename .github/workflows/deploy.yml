@@ -1,4 +1,4 @@
-name: Deploy Next.js to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -32,13 +32,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
           cache: 'npm'
           
       - name: Install dependencies
         run: npm ci
         
-      - name: Build with Next.js
+      - name: Build static site
         run: npm run build
         
       - name: Setup Pages
@@ -47,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./dist
 
   # Deployment job
   deploy:
