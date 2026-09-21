@@ -11,7 +11,7 @@ export default function NotFound() {
       <div className="page-head">
         <h1>Nothing here</h1>
         <p>
-          That page moved or never existed. Try the <Link to="/">work</Link> or the{' '}
+          That page moved or never existed. Try the <Link to="/work">work</Link> or the{' '}
           <Link to="/blog">writing</Link>.
         </p>
       </div>

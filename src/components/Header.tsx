@@ -9,9 +9,7 @@ export default function Header() {
       </Link>
 
       <nav className="site-nav" aria-label="Main">
-        <NavLink to="/" end>
-          Work
-        </NavLink>
+        <NavLink to="/work">Work</NavLink>
         <NavLink to="/blog">Writing</NavLink>
         <NavLink to="/about">About</NavLink>
 
