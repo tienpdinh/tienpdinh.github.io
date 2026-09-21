@@ -15,12 +15,10 @@ export default function Layout() {
       </Head>
 
       {bare ? (
-        <>
-          <main id="main" className="main-bare">
-            <Outlet />
-          </main>
-          <Footer />
-        </>
+        // The landing renders its own footer, inside the second snap panel.
+        <main id="main" className="main-bare">
+          <Outlet />
+        </main>
       ) : (
         <>
           <a className="skip-link" href="#main">
