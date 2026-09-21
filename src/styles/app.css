@@ -98,35 +98,55 @@ main {
   background: var(--surface-raised);
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Landing ---------- */
 
-.hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: clamp(2rem, 6vw, 4.5rem);
-  padding-bottom: clamp(3rem, 8vw, 5.5rem);
+.main-bare {
+  max-width: none;
+  padding: 0;
 }
 
-.hero h1 {
-  font-size: var(--step-4);
-  letter-spacing: -0.045em;
+.landing {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  max-width: var(--wide);
+  margin-inline: auto;
+  padding: 1.75rem var(--gutter) 2.5rem;
+}
+
+.landing-top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.landing-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing-main h1 {
+  font-size: clamp(3.2rem, 13vw, 9rem);
+  line-height: 0.92;
+  letter-spacing: -0.055em;
 }
 
 .typed-line {
   min-height: 1.8em;
-  margin-top: 0.75rem;
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: var(--step-1);
   color: var(--accent);
 }
 
 .caret {
   display: inline-block;
-  width: 0.08em;
+  width: 0.07em;
   height: 1.05em;
-  margin-left: 0.08em;
+  margin-left: 0.09em;
   background: currentColor;
   vertical-align: -0.16em;
   animation: blink 1.05s steps(2, start) infinite;
@@ -138,88 +158,139 @@ main {
   }
 }
 
-.hero-blurb {
-  max-width: 52ch;
-  margin-top: 1.5rem;
+.landing .typed-line {
+  margin-top: 1.35rem;
+  font-size: clamp(1.1rem, 2.6vw, 1.66rem);
+}
+
+.landing-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 2.5rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+.landing-nav a {
+  padding-block: 0.2rem;
   color: var(--ink-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
 }
 
-.hero-portrait img {
-  width: clamp(140px, 22vw, 240px);
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 1px solid var(--rule);
+.landing-nav a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
 }
 
-@media (max-width: 40rem) {
-  .hero {
-    grid-template-columns: 1fr;
-    justify-items: start;
-  }
+/* ---------- Work index ---------- */
 
-  .hero-portrait {
-    order: -1;
-  }
-}
-
-/* ---------- Contact sheet ---------- */
-
-.work h2 {
-  font-size: var(--step-2);
-  padding-bottom: 0.9rem;
-  border-bottom: 1px solid var(--rule);
-}
-
-.sheet {
+.index {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
-  gap: clamp(1.25rem, 3vw, 2rem);
-  margin-top: 2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.index-list {
+  margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.sheet-item a {
-  display: block;
-  text-decoration: none;
+.index-list li {
+  border-top: 1px solid var(--rule);
+}
+
+.index-list li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.index-list a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-block: clamp(0.85rem, 2vw, 1.3rem);
   color: var(--ink);
+  text-decoration: none;
+  transition: opacity var(--transition), color var(--transition);
 }
 
-.sheet-item img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  background: var(--surface);
-  border: 1px solid var(--rule);
-  /* The work sits quiet until you reach for it, then comes up to full colour. */
-  filter: saturate(0.45) brightness(0.85);
-  transition: filter var(--transition), border-color var(--transition);
-}
-
-.sheet-item a:hover img,
-.sheet-item a:focus-visible img {
-  filter: none;
-  border-color: var(--accent);
-}
-
-.sheet-title {
-  display: block;
-  margin-top: 0.7rem;
+.index-title {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: var(--step-0);
+  font-size: clamp(1.15rem, 2.4vw, 1.66rem);
+  letter-spacing: -0.02em;
 }
 
-.sheet-item a:hover .sheet-title {
+/* Reading one title dims the rest of the list. */
+.index-list:hover a {
+  opacity: 0.4;
+}
+
+.index-list li:hover a,
+.index-list a:focus-visible {
+  opacity: 1;
   color: var(--accent);
+}
+
+.index-thumb {
+  display: none;
+}
+
+.index-preview {
+  position: sticky;
+  top: 3rem;
+  aspect-ratio: 4 / 3;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  overflow: hidden;
+}
+
+.index-preview img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.index-preview img.is-active {
+  opacity: 1;
+}
+
+@media (max-width: 52rem) {
+  .index {
+    grid-template-columns: 1fr;
+  }
+
+  .index-preview {
+    display: none;
+  }
+
+  /* No hover to drive the preview pane, so each row carries its own cover. */
+  .index-thumb {
+    display: block;
+    flex: none;
+    width: 4.75rem;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 1px solid var(--rule);
+  }
+
+  .index-list:hover a {
+    opacity: 1;
+  }
 }
 
 /* ---------- Page headers and lists ---------- */
 
 /*
- * Reading columns centre inside the wide shell; the contact sheet on the home
- * page is the only thing that uses the full width.
+ * Reading columns centre inside the wide shell; the work index is the only
+ * thing that spans its full width.
  */
 .page-head,
 .post-list,
@@ -231,6 +302,11 @@ main {
 .page-head {
   max-width: var(--measure);
   padding-bottom: 2.5rem;
+}
+
+.page-head-wide {
+  max-width: none;
+  margin-inline: 0;
 }
 
 .page-head h1 {

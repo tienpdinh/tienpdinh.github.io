@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Blog from './pages/Blog'
 import Post from './pages/Post'
+import Work from './pages/Work'
 import ProjectPage from './pages/Project'
 import NotFound from './pages/NotFound'
 
@@ -15,6 +16,7 @@ export const routes: RouteRecord[] = [
     entry: 'src/Layout.tsx',
     children: [
       { index: true, Component: Home },
+      { path: 'work', Component: Work },
       { path: 'about', Component: About },
       { path: 'blog', Component: Blog },
       {
