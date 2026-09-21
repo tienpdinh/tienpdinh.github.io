@@ -79,6 +79,50 @@ function isBlankText(node: RootContent | ElementContent): boolean {
   return node.type === 'text' && node.value.trim() === ''
 }
 
+const MEDIA = ['img', 'iframe', 'video']
+
+function isMedia(node: RootContent | ElementContent): boolean {
+  return node.type === 'element' && MEDIA.includes(node.tagName)
+}
+
+/**
+ * Markdown that puts an image on the line directly below its sentence, with no
+ * blank line between, parses as one paragraph holding both. Split those so the
+ * media becomes a block of its own and can be treated as a figure below.
+ */
+function rehypeSplitMedia() {
+  return (tree: Root) => {
+    const out: RootContent[] = []
+
+    for (const node of tree.children) {
+      if (!isElement(node, 'p') || !node.children.some(isMedia)) {
+        out.push(node)
+        continue
+      }
+
+      let run: ElementContent[] = []
+      const flushText = () => {
+        if (run.some((child) => !isBlankText(child))) {
+          out.push({ type: 'element', tagName: 'p', properties: {}, children: run })
+        }
+        run = []
+      }
+
+      for (const child of node.children) {
+        if (isMedia(child)) {
+          flushText()
+          out.push(child)
+        } else {
+          run.push(child)
+        }
+      }
+      flushText()
+    }
+
+    tree.children = out
+  }
+}
+
 /**
  * Markdown here writes captions as a blockquote directly after an image or
  * video embed. Fold those pairs into real <figure>/<figcaption> markup so the
@@ -138,14 +182,14 @@ function rehypeFigures() {
 
 /** An <img>/<iframe>/<video>, either bare or alone inside a paragraph. */
 function mediaOf(node: RootContent): Element | undefined {
-  const media = ['img', 'iframe', 'video']
   if (node.type !== 'element') return undefined
-  if (media.includes(node.tagName)) return node
+  if (MEDIA.includes(node.tagName)) return node
 
   if (node.tagName === 'p') {
     const children = node.children.filter((child) => !isBlankText(child))
-    if (children.length === 1 && children[0].type === 'element' && media.includes(children[0].tagName)) {
-      return children[0]
+    const only = children[0]
+    if (children.length === 1 && only?.type === 'element' && MEDIA.includes(only.tagName)) {
+      return only
     }
   }
   return undefined
@@ -165,6 +209,7 @@ const processor = unified()
   // most project pages rely on. Without them the videos silently disappear.
   .use(remarkRehype, { allowDangerousHtml: true })
   .use(rehypeRaw)
+  .use(rehypeSplitMedia)
   .use(rehypeFigures)
   .use(rehypeSlug)
   .use(rehypeKatex)
