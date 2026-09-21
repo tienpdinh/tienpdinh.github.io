@@ -51,6 +51,9 @@ jobs:
 
   # Deployment job
   deploy:
+    # Pull requests build as a check only. Without this they would publish
+    # straight to the live domain.
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
