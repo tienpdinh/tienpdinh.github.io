@@ -3,7 +3,7 @@ title: About
 permalink: /about
 layout: page
 ---
-![me](/img/about/me.jpg)
+![Tien Dinh with a cat](/img/about/tien.jpg)
 
 <br/>
 
