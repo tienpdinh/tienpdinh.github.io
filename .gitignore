@@ -65,3 +65,7 @@ pids
 
 # Legacy Jekyll files (removed)
 # _config.yml, _includes/, _layouts/, assets/, etc.
+
+# build output
+dist/
+.vite/

@@ -1,0 +1,63 @@
+/*
+ * Dark is the design's home ground: this is a portfolio of rendered images,
+ * and they read the way they were authored against a dark viewport. The light
+ * theme is a faithful inversion rather than the primary design.
+ */
+:root {
+  --ground: #101826;
+  --surface: #18202f;
+  --surface-raised: #1f2939;
+  --ink: #e6eaf2;
+  --ink-muted: #93a0b8;
+  --accent: #f0a868;
+  --accent-ink: #101826;
+  --rule: #273245;
+
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Literata', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --step--1: 0.882rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.33rem;
+  --step-2: 1.66rem;
+  --step-3: 2.08rem;
+  --step-4: clamp(2.75rem, 7vw, 4rem);
+
+  --measure: 68ch;
+  --wide: 1140px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+
+  --radius: 3px;
+  --transition: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    --ground: #f6f7f9;
+    --surface: #ffffff;
+    --surface-raised: #eef1f5;
+    --ink: #101826;
+    --ink-muted: #5a6880;
+    --accent: #a85c1b;
+    --accent-ink: #ffffff;
+    --rule: #dde2ea;
+
+    color-scheme: light;
+  }
+}
+
+:root[data-theme='light'] {
+  --ground: #f6f7f9;
+  --surface: #ffffff;
+  --surface-raised: #eef1f5;
+  --ink: #101826;
+  --ink-muted: #5a6880;
+  --accent: #a85c1b;
+  --accent-ink: #ffffff;
+  --rule: #dde2ea;
+
+  color-scheme: light;
+}
