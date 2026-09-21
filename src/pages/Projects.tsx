@@ -11,7 +11,7 @@ export default function Projects() {
         <title>Projects — Tien Dinh</title>
       </Head>
 
-      <div className="page-head page-head-wide">
+      <div className="page-head">
         <h1>Projects</h1>
         <p>Graphics, simulation, and machine learning, mostly from scratch.</p>
       </div>
@@ -24,12 +24,20 @@ export default function Projects() {
             <>
               <div className="card-media">
                 <img src={project.image} alt="" loading="lazy" />
+
+                {/* Visual duplicate of .card-text, revealed on hover. */}
                 <div className="card-reveal" aria-hidden="true">
+                  <span className="card-title">{project.title}</span>
                   <p>{project.summary}</p>
                 </div>
               </div>
-              <h2 className="card-title">{project.title}</h2>
-              <p className="card-desc">{project.summary}</p>
+
+              {/* The copy that carries the link's accessible name. Hidden from
+                  sight wherever the overlay can be hovered. */}
+              <div className="card-text">
+                <h2 className="card-title">{project.title}</h2>
+                <p>{project.summary}</p>
+              </div>
             </>
           )
 

@@ -6,7 +6,7 @@ permalink: /project/chess
 
 # Chess
 
-A project for Dr. Stephen Guy's class **Game Engine Technologies**. My classmate [Daniel Shervheim](https://danielshervheim.com/) and I collaborated on this project..
+A project for Dr. Stephen Guy's class **Game Engine Technologies**. My classmate [Daniel Shervheim](https://danielshervheim.com/) and I collaborated on this project.
 
 Our directive was to create a game in a provided game engine, using only Lua scripting. Additionally, our game had to demonstrate some form of animation. We chose to create a chess game.
 
